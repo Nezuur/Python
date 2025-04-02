@@ -6,12 +6,12 @@ the current local branch and a specified branch in a GitLab repository
 """
 
 import os
-import gitlab
 import difflib
 import argparse
 import binascii
 import subprocess
 from urllib.parse import urlparse
+import gitlab
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 from cryptography.hazmat.primitives.hmac import HMAC
 from cryptography.hazmat.primitives import hashes, padding
@@ -158,7 +158,7 @@ def main():
     args = parse_arguments()
 
     if not GITLAB_TOKEN:
-        raise Exception("Error: GitLab token is not set, please set it in the environment variable GITLAB_VAULT_CHECK_TOKEN.")
+        raise Exception("Error: GitLab token is not set, set the env variable GITLAB_VAULT_CHECK_TOKEN.")
 
     try:
         gl = gitlab.Gitlab(GITLAB_URL, private_token=GITLAB_TOKEN)
