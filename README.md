@@ -2,9 +2,10 @@
 
 Python programs and tools for various purposes.
 
-[[_TOC_]]
+- [Python](#python)
+  - [Tools/ansible\_vault\_decrypt\_and\_compare](#toolsansible_vault_decrypt_and_compare)
 
-## ansible_vault_decrypt_and_compare
+## Tools/ansible_vault_decrypt_and_compare
 
 The `vault-check-decrypt.py` script is designed to decrypt and compare Ansible Vault files between the current local branch and a specified branch in a GitLab repository.
 
